@@ -5,10 +5,10 @@ from PIL import Image
 from PIL import ImageTk
 import streamlink
 import cv2
-from yolov5.detect import detect
-from yolov5.models.experimental import attempt_load
-from yolov5.utils.torch_utils import select_device
-from yolov5.utils.plots import plot_one_box
+from detect import detect
+from models.experimental import attempt_load
+from utils.torch_utils import select_device
+from utils.plots import plot_one_box
 import math
 
 def distance(x1, y1, x2, y2):
