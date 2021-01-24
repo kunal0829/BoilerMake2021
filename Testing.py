@@ -106,7 +106,7 @@ root = tk.Tk()
 root.title('Purdue')
 root.geometry("1097x802")
 #picture = PhotoImage(file="Purdue.png")
-img = Image.open("Purdue.png")
+img = Image.open("Images/PurdueWithRegions.png")
 img = img.resize((1097,802), Image.ANTIALIAS)
 picture =  ImageTk.PhotoImage(img)
 
@@ -115,19 +115,23 @@ label0 = Label(root, image=picture, borderwidth=0, highlightthickness=10)
 label0.place(x=0, y=0)
 
 #star = tk.PhotoImage(file="star.png")
-img = Image.open("circle.png")
-img = img.resize((25,25), Image.ANTIALIAS)
-star =  ImageTk.PhotoImage(img)
+cir = Image.open("Images/blue.png")
+cir = cir.resize((25,25), Image.ANTIALIAS)
+circle =  ImageTk.PhotoImage(cir)
 
 
 
-camera1 = Button(root, image = star, command = cam1)
+camera1 = Button(root, image = circle, command = cam1)
 camera1.place(x = 675,y = 600)
 
-camera2 = Button(root, image = star, command = cam2)
+
+
+camera2 = Button(root, image = circle, command = cam2)
 camera2.place(x = 450,y = 425)
 
-camera3 = Button(root, image = star, command = cam3)
+camera3 = Button(root, image = circle, command = cam3)
 camera3.place(x = 690,y = 75)
+
+
 
 root.mainloop()
